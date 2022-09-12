@@ -1,0 +1,14 @@
+### RSocket hellp
+RSOCKET /hello
+URI: ws://localhost:8080/rsocket
+Content-Type: application/json
+
+"Jackie"
+
+
+### RSocket find user by id
+RSOCKET /findUserById
+URI: ws://localhost:8080/rsocket
+Content-Type: application/json
+
+1
