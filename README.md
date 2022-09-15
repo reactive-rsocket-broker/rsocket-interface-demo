@@ -79,6 +79,6 @@ public class RSocketInterfaceTest {
 
 # References
 
-* Spring RSocket: https://docs.spring.io/spring-framework/docs/6.0.0-SNAPSHOT/reference/html/web-reactive.html#rsocket
-* RSocket interface: https://docs.spring.io/spring-framework/docs/6.0.0-SNAPSHOT/reference/html/web-reactive.html#rsocket-interface
+* Spring RSocket: https://docs.spring.io/spring-framework/docs/6.0.0-M6/reference/html/web-reactive.html#rsocket
+* RSocket interface: https://docs.spring.io/spring-framework/docs/6.0.0-M6/reference/html/web-reactive.html#rsocket-interface
 * Spring HTTP Interface: https://docs.spring.io/spring-framework/docs/6.0.0-M5/reference/html/integration.html#rest-http-interface
