@@ -15,8 +15,7 @@
         <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <spring.version>6.0.0-M6</spring.version>
-        <spring-boot.version>3.0.0-SNAPSHOT</spring-boot.version>
+        <spring-boot.version>3.0.0-RC1</spring-boot.version>
     </properties>
 
     <dependencies>
@@ -56,16 +55,9 @@
             <dependency>
                 <groupId>org.junit</groupId>
                 <artifactId>junit-bom</artifactId>
-                <version>5.9.0</version>
+                <version>5.9.1</version>
                 <scope>import</scope>
                 <type>pom</type>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-framework-bom</artifactId>
-                <version>${spring.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
