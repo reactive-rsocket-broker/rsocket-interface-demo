@@ -12,7 +12,7 @@ public class HttpBinClientTest {
     @BeforeAll
     public static void setUp() throws Exception {
         WebClient webClient = WebClient.builder().build();
-        HttpServiceProxyFactory httpServiceProxyFactory = new HttpServiceProxyFactory(WebClientAdapter.forClient(webClient));
+        HttpServiceProxyFactory httpServiceProxyFactory = HttpServiceProxyFactory.builder().clientAdapter(WebClientAdapter.forClient(webClient)).build();
         httpServiceProxyFactory.afterPropertiesSet();
         httpBinClient = httpServiceProxyFactory.createClient(HttpBinClient.class);
     }
