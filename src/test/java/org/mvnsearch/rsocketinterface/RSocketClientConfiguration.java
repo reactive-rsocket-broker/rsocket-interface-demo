@@ -24,7 +24,7 @@ public class RSocketClientConfiguration {
 
     @Bean
     public RSocketServiceProxyFactory rsocketServiceProxyFactory(RSocketRequester rsocketRequester) {
-        return new RSocketServiceProxyFactory(rsocketRequester);
+        return RSocketServiceProxyFactory.builder().rsocketRequester(rsocketRequester).build();
     }
 
     @Bean
