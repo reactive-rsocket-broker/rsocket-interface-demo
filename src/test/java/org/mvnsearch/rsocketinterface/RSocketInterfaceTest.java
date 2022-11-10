@@ -1,7 +1,6 @@
 package org.mvnsearch.rsocketinterface;
 
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mvnsearch.User;
@@ -12,8 +11,6 @@ import org.springframework.messaging.rsocket.RSocketStrategies;
 import org.springframework.messaging.rsocket.service.RSocketServiceProxyFactory;
 
 import java.net.URI;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class RSocketInterfaceTest {
     private static RSocketRequester requester;
@@ -26,8 +23,7 @@ public class RSocketInterfaceTest {
                 .decoders(decoders -> decoders.add(new Jackson2JsonDecoder()))
                 .build();
         requester = RSocketRequester.builder().rsocketStrategies(strategies).websocket(URI.create("ws://localhost:8080/rsocket"));
-        RSocketServiceProxyFactory factory =  RSocketServiceProxyFactory.builder().rsocketRequester(requester).build();
-        factory.afterPropertiesSet();
+        RSocketServiceProxyFactory factory = RSocketServiceProxyFactory.builder().rsocketRequester(requester).build();
         helloService = factory.createClient(HelloService.class);
     }
 
@@ -40,8 +36,6 @@ public class RSocketInterfaceTest {
     public void testHello() {
         String welcome = helloService.hello("Jackie").block();
         System.out.println(welcome);
-        assertThat(welcome).isBlank();
-        assertThat(welcome).isBlank();
     }
 
     @Test
